@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cviexqlqid7h0"]
+
+[ext_resource type="Script" uid="uid://bq7vm5313isvn" path="res://scenes/characters/player/player.gd" id="1_7uws0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvjjq"]
+margin = 0.3
+height = 1.7
+
+[node name="Player" type="CharacterBody3D" unique_id=169868713]
+script = ExtResource("1_7uws0")
+mouse_sensitivity = 0.002
+run_speed = 5.0
+jump_force = 12.0
+gravity = 0.98
+walk_speed = 3.0
+acceleration = 30.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2013876490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("CapsuleShape3D_hvjjq")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1689758177]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+current = true
+near = 0.001
