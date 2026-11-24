@@ -1,10 +1,18 @@
 [gd_scene format=3 uid="uid://bsyxpmhuaawaq"]
 
 [ext_resource type="MeshLibrary" uid="uid://b7vroh7oaqjqw" path="res://assets/meshlibs/wall-tile.meshlib" id="1_43ixu"]
+[ext_resource type="Script" uid="uid://bri40jsvnvipy" path="res://scenes/rooms/base_room.gd" id="1_oxyh5"]
+[ext_resource type="MeshLibrary" uid="uid://cgxf5kmonq7be" path="res://assets/meshlibs/celling-tiles.meshlib" id="2_4x8xk"]
 
 [node name="BaseRoom" type="Node3D" unique_id=962885069]
+script = ExtResource("1_oxyh5")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=2105018059]
 mesh_library = ExtResource("1_43ixu")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+
+[node name="Celling" type="GridMap" parent="." unique_id=812486164]
+mesh_library = ExtResource("2_4x8xk")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
